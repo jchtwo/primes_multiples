@@ -1,20 +1,24 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useTheme } from 'vuetify'
-import tp from '../assets/tp.jpg'
+import { useThemeStore } from '@/stores/theme'
+
+const store = useThemeStore()
 
 const theme = useTheme()
 
 const drawer = ref(true)
 
 const toggleTheme = () => {
-  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+  const newTheme = theme.global.current.value.dark ? 'light' : 'dark'
+  theme.global.name.value = newTheme
+  store.setDarkLight(newTheme)
 }
 </script>
 
 <template>
   <header>
-    <v-toolbar dark prominent :image="tp" theme="light">
+    <v-toolbar dark prominent theme="light">
       <v-toolbar-title text="Sums" style="font-weight: bold"></v-toolbar-title>
 
       <v-spacer></v-spacer>
