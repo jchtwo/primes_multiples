@@ -23,7 +23,7 @@ const bruteMultiples = (
 
 // The below works because when you can have prior knowledge of all numerical variables you can normally
 // work out a solution that invloves zero loops
-// Lets work out the mental model for this with solving the sum of a gingle multiplier's values.
+// Lets work out the mental model for this with solving the sum of a single multiplier's values.
 // Say our multiplier is 5 and our goal is 30
 // the numbers we are looking to sum would be 5,10,15,20 & 25 (since in the task we only take numbers
 // below the goal number)
@@ -38,6 +38,7 @@ const bruteMultiples = (
 // is the same as 5 x (1+2+3+4+5)
 // (1+2+3+4+5) is the same as 5 * the median value of (1,2,3,4,5)
 // so we end up with 5 * 5 * ((1+ 5) / 2)
+// or in other words  multiplier * number_of_numbers_to_sum * the_mid_value_of_numbers_to_sum
 
 const sumOneMultiple = (multiple: number, goal: number): number => {
   const timesMultiplied = Math.floor((goal - 1) / multiple)
