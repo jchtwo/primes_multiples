@@ -1,4 +1,4 @@
-interface iPrimesReturn {
+export interface iPrimesReturn {
   sum: number
   primes: number[]
 }
@@ -73,7 +73,7 @@ const semiBruteIsPrime = (num:number): boolean => {
 // primes array since these will be the primes
 // step8 => we use filter to remove numbers below the min value if this has been set and reduce to
 // sum all the primes, these are then returned.
-const seivePrimes = (min: number, max: number): iPrimesReturn => {
+const sievePrimes = (min: number, max: number): iPrimesReturn => {
     const seiveArray = Array.from({ length: max }, () => true)
     const primesArray = []
     const upperLimit = Math.sqrt(max)
@@ -100,4 +100,4 @@ const seivePrimes = (min: number, max: number): iPrimesReturn => {
     }
 }
 
-export { brutePrimes, semiBrutePrimes, seivePrimes }
+export { brutePrimes, semiBrutePrimes, sievePrimes }
