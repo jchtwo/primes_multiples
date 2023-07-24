@@ -63,7 +63,7 @@ const handleSubmit = () => {
 }
 </script>
 <template>
-  <div class="d-flex flex-column justify-center align-center mt-4 h-auto" style="height: min-content;">
+  <div class="d-flex flex-column justify-center align-center mt-4 h-auto grayscale" style="height: min-content;">
     <div class="d-flex flex-column justify-center align-center">
       <h1 class="text-h2">Sum of all the Prime Numbers</h1>
       <h2 class="text-h3">
@@ -73,7 +73,7 @@ const handleSubmit = () => {
         Below <span class="text-teal">{{ maxNumber }}</span>
       </h2>
     </div>
-    <div class="d-lg-flex justify-center align-center m-2">
+    <div class="d-lg-flex justify-center align-center mt-4">
       <v-sheet width="500" class="mx-4" style="max-width: 50%">
         <v-form @submit.prevent="handleSubmit">
           <v-text-field
@@ -110,12 +110,16 @@ const handleSubmit = () => {
       <v-card v-if="primesObject"
         ><v-card-text class="d-flex flex-column align-center">
           <h2 class="text-h4">Sum of Primes</h2>
-          <p class="text-h4 text-primary">{{ primesObject.sum }}</p>
-          <p class="text-h6 text-success">Total Primes: {{ primesObject.primes.length }}</p>
+          <p class="text-h4 text-primary">{{ primesObject.sum.toLocaleString() }}</p>
+          <p class="text-h6 text-success">Total Primes: {{ primesObject.primes.length.toLocaleString() }}</p>
           <p class="text-h6 text-orange">Time in MS: {{ timeTaken }}</p>
         </v-card-text></v-card
       >
     </div>
   </div>
 </template>
-<style></style>
+<style scoped>
+.grayscale {
+  filter: grayscale(35%);
+}
+</style>

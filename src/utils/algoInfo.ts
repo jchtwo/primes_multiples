@@ -79,4 +79,57 @@ const primesInfo = [
   ]
 ]
 
-export { primesInfo }
+const multiplesInfo = [
+  [{
+    id: 1,
+    colour: 'info',
+    icon: 'mdi-numeric-1',
+    text: "Starts by creating an array (as large as the end number)"
+  },{
+    id: 2,
+    colour: 'orange',
+    icon: 'mdi-numeric-2',
+    text: "Then runs the JS 'filter' array method with loops over the whole array. For each element a callback function runs that returns a boolean true/false. The 'true' elements are added to the new array."
+  },{
+    id: 3,
+    colour: 'success',
+    icon: 'mdi-lightbulb-outline',
+    text: "'True' being those elements that return 0 when divided by either of the multipliers given."
+  },
+  {
+    id: 4,
+    colour: 'purple',
+    icon: 'mdi-numeric-3',
+    text: "Finally the JS 'reduce' array method is ran. This loops over the filtered array and 'reduces' every element into a sum number."
+  }],
+  [{
+    id: 1,
+    colour: 'green',
+    icon: 'mdi-lightbulb-outline',
+    text: "Since we know every variable needed to solve this problem we can avoid loops entirely. For simplicity this algorythm solves each mutiple sum separately."
+  },{
+    id: 2,
+    colour: 'purple',
+    icon: 'mdi-numeric-1',
+    text: "We can work out the amount of numbers we will need for our sum by dividing the end number by the multiple (-1 so that we never include it in the sum). "
+  },{
+    id: 3,
+    colour: 'info',
+    icon: 'mdi-numeric-2',
+    text: "We can then reduce the rest of the logic algebraically. Lets say our multiplier is 5 and our end number is 30. 29 // 5 is 5 so our 'numbers to sum' will be 5"
+  },
+  {
+    id: 4,
+    colour: 'red',
+    icon: 'mdi-numeric-3',
+    text: "(5 + 10 + 15 + 20 + 25) is the same as (5*1 + 5*2 + 5*3 + 5*4 + 5*5) is the same as 5 * (1+2+3+4+5) is the same as 5 * 5 * ((1+6) / 2)"
+  },
+  {
+    id: 5,
+    colour: 'yellow',
+    icon: 'mdi-numeric-4',
+    text: "So our formula is multiplier * numbers_to_sum * the_mid_value_of_numbers_to_sum"
+  }]
+]
+
+export { primesInfo, multiplesInfo }
