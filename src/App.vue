@@ -7,10 +7,10 @@ import Footer from './components/Footer.vue'
 <template>
   <v-app>
     <Navigation />
-    <v-main style="min-height: 100%;">
+    <v-main style="min-height: 100%">
       <RouterView />
     </v-main>
-    <Footer/>
+    <Footer />
   </v-app>
 </template>
 

@@ -19,11 +19,13 @@ const convertedNumber = computed(() => {
 })
 
 const handleCreateCSV = () => {
-  let data = [{
-    decimal: props.sumToChange,
-    binary: convertedNumber.value.binary,
-    hexadecimal: convertedNumber.value.hexadecimal
-  }]
+  let data = [
+    {
+      decimal: props.sumToChange,
+      binary: convertedNumber.value.binary,
+      hexadecimal: convertedNumber.value.hexadecimal
+    }
+  ]
 
   const options = {
     filename: `sums_info`,

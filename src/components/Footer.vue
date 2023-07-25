@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const icons = [
   { icon: 'mdi-facebook', to: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
   { icon: 'mdi-twitter', to: 'https://en.wikipedia.org/wiki/Rickrolling' },

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { bruteMultiples, fastMultiples } from '@/utils/multiples'
-import {multiplesInfo} from '../utils/algoInfo'
+import { multiplesInfo } from '../utils/algoInfo'
 import NumberConverter from '../components/NumberConverter.vue'
 
 const multiple1 = ref(3)
@@ -126,18 +126,16 @@ const handleSubmit = () => {
             Total Multiples: {{ multiplesObject.multiples.length.toLocaleString() }}
           </p>
           <p class="text-h6 text-orange">Time in MS: {{ timeTaken }}</p>
-          <NumberConverter :sum-to-change="multiplesObject.sum"/>
-        </v-card-text></v-card
-      >
+          <NumberConverter :sum-to-change="multiplesObject.sum" /> </v-card-text
+      ></v-card>
       <v-card v-if="multiplesSum"
         ><v-card-text class="d-flex flex-column align-center">
           <h2 class="text-h4">Sum of the multiples {{ multiple1 }} and {{ multiple2 }}</h2>
           <p class="text-h4 text-primary">{{ multiplesSum.toLocaleString() }}</p>
           <p class="text-h6 text-success">No array used</p>
           <p class="text-h6 text-orange">Time in MS: {{ timeTaken }}</p>
-          <NumberConverter :sum-to-change="multiplesSum"/>
-        </v-card-text></v-card
-      >
+          <NumberConverter :sum-to-change="multiplesSum" /> </v-card-text
+      ></v-card>
     </div>
   </div>
 </template>
