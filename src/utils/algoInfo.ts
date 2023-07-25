@@ -122,7 +122,7 @@ const multiplesInfo = [
     id: 4,
     colour: 'red',
     icon: 'mdi-numeric-3',
-    text: "(5 + 10 + 15 + 20 + 25) is the same as (5*1 + 5*2 + 5*3 + 5*4 + 5*5) is the same as 5 * (1+2+3+4+5) is the same as 5 * 5 * ((1+6) / 2)"
+    text: "(5 + 10 + 15 + 20 + 25) is the same as (5*1 + 5*2 + 5*3 + 5*4 + 5*5) is the same as 5 * (1+2+3+4+5) is the same as 5 * 5 * ((1+5) / 2)"
   },
   {
     id: 5,

@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue'
 import { brutePrimes, semiBrutePrimes, sievePrimes } from '@/utils/primes'
 import { primesInfo } from '../utils/algoInfo'
+import NumberConverter from '../components/NumberConverter.vue'
 
 const algos = [
   'Brute Force (warning: may look like your PC has crashed)',
@@ -113,6 +114,7 @@ const handleSubmit = () => {
           <p class="text-h4 text-primary">{{ primesObject.sum.toLocaleString() }}</p>
           <p class="text-h6 text-success">Total Primes: {{ primesObject.primes.length.toLocaleString() }}</p>
           <p class="text-h6 text-orange">Time in MS: {{ timeTaken }}</p>
+          <NumberConverter :sum-to-change="primesObject.sum"/>
         </v-card-text></v-card
       >
     </div>

@@ -1,11 +1,25 @@
 <script setup lang="ts">
-const icons = ['mdi-facebook', 'mdi-twitter', 'mdi-linkedin', 'mdi-instagram']
+
+const icons = [
+  { icon: 'mdi-facebook', to: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
+  { icon: 'mdi-twitter', to: 'https://en.wikipedia.org/wiki/Rickrolling' },
+  { icon: 'mdi-linkedin', to: 'https://screenrant.com/three-seashells-demolition-man-function/' },
+  { icon: 'mdi-instagram', to: 'https://www.youtube.com/watch?v=8AMiGIzoeBg' }
+]
 </script>
 
 <template>
   <v-footer class="text-center d-flex flex-column">
     <div>
-      <v-btn v-for="icon in icons" :key="icon" class="mx-4" :icon="icon" variant="text"></v-btn>
+      <v-btn
+        v-for="icon in icons"
+        :key="icon.icon"
+        class="mx-4"
+        :icon="icon.icon"
+        variant="text"
+        :href="icon.to"
+        target="_blank"
+      ></v-btn>
     </div>
 
     <div class="pt-0">

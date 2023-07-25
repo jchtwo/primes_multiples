@@ -126,6 +126,7 @@ const handleSubmit = () => {
             Total Multiples: {{ multiplesObject.multiples.length.toLocaleString() }}
           </p>
           <p class="text-h6 text-orange">Time in MS: {{ timeTaken }}</p>
+          <NumberConverter :sum-to-change="multiplesObject.sum"/>
         </v-card-text></v-card
       >
       <v-card v-if="multiplesSum"
@@ -134,7 +135,7 @@ const handleSubmit = () => {
           <p class="text-h4 text-primary">{{ multiplesSum.toLocaleString() }}</p>
           <p class="text-h6 text-success">No array used</p>
           <p class="text-h6 text-orange">Time in MS: {{ timeTaken }}</p>
-          <NumberConverter :sum-to-change="multiplesObject.sum"/>
+          <NumberConverter :sum-to-change="multiplesSum"/>
         </v-card-text></v-card
       >
     </div>
